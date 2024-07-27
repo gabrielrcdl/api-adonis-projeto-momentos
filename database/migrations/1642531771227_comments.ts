@@ -7,7 +7,7 @@ export default class Comments extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('username')
-      table.string('text')
+      table.string('c')
       table.integer('moment_id').unsigned().references('moments.id').onDelete('CASCADE')
 
       /**
